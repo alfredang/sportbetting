@@ -282,6 +282,13 @@ input { font-family: inherit; }
   font-size: 1rem;
 }
 .team-row .dash { color: var(--text-mute); font-weight: 400; margin: 0 6px; }
+.team-hint {
+  font-size: 0.72rem;
+  color: var(--text-mute);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-weight: 500;
+}
 
 .odds-row {
   display: grid;

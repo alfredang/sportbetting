@@ -1,114 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>GoalLine — Football Betting</title>
-  <link rel="stylesheet" href="styles.css" />
-</head>
-<body>
-  <header class="topbar">
-    <div class="brand">
-      <span class="brand-mark">⚽</span>
-      <span class="brand-name">GoalLine</span>
-    </div>
-    <nav class="tabs" id="tabs">
-      <button class="tab active" data-view="matches">Upcoming</button>
-      <button class="tab" data-view="live">
-        <span class="live-dot"></span> Live
-      </button>
-      <button class="tab" data-view="dashboard">Dashboard</button>
-    </nav>
-    <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme" title="Toggle theme">
-      <span class="icon-sun" aria-hidden="true">☀️</span>
-      <span class="icon-moon" aria-hidden="true">🌙</span>
-    </button>
-    <div class="balance-pill">
-      <span class="balance-label">Balance</span>
-      <span class="balance-value" id="balance-display">$0.00</span>
-    </div>
-  </header>
-
-  <div class="layout">
-    <main class="content">
-      <section id="matches-view" class="view active">
-        <div class="view-header">
-          <h2>Upcoming Matches</h2>
-          <p class="view-sub">Pick your winners and build a slip</p>
-        </div>
-        <div class="match-grid" id="matches-grid"></div>
-      </section>
-
-      <section id="live-view" class="view">
-        <div class="view-header">
-          <h2><span class="live-dot"></span> Live Now</h2>
-          <p class="view-sub">Odds flicker in real time</p>
-        </div>
-        <div class="match-grid" id="live-grid"></div>
-      </section>
-
-      <section id="dashboard-view" class="view">
-        <div class="view-header">
-          <h2>Dashboard</h2>
-          <p class="view-sub">Your account and betting history</p>
-        </div>
-        <div class="stat-grid" id="stat-grid"></div>
-        <div class="history-card">
-          <h3>Bet History</h3>
-          <div class="history-table-wrap">
-            <table class="history-table" id="history-table">
-              <thead>
-                <tr>
-                  <th>Placed</th>
-                  <th>Legs</th>
-                  <th>Odds</th>
-                  <th>Stake</th>
-                  <th>Payout</th>
-                  <th>Status</th>
-                </tr>
-              </thead>
-              <tbody id="history-body"></tbody>
-            </table>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <aside class="bet-slip" id="bet-slip">
-      <div class="slip-header">
-        <h3>Bet Slip <span class="slip-count" id="slip-count">0</span></h3>
-        <button class="slip-clear" id="slip-clear" title="Clear slip">Clear</button>
-      </div>
-      <div class="slip-body" id="slip-body">
-        <p class="slip-empty">Tap an odds button to add a selection.</p>
-      </div>
-      <div class="slip-footer">
-        <div class="slip-row">
-          <span>Total Odds</span>
-          <strong id="total-odds">1.00</strong>
-        </div>
-        <label class="stake-row">
-          <span>Stake ($)</span>
-          <input type="number" id="stake-input" min="1" step="1" placeholder="0" />
-        </label>
-        <div class="slip-row payout-row">
-          <span>Potential Payout</span>
-          <strong id="payout-display" class="payout">$0.00</strong>
-        </div>
-        <div class="slip-error" id="slip-error"></div>
-        <button class="place-btn" id="place-btn">Place Bet</button>
-      </div>
-    </aside>
-  </div>
-
-  <button class="slip-toggle" id="slip-toggle" aria-label="Toggle bet slip">
-    <span class="slip-toggle-icon">🧾</span>
-    <span class="slip-toggle-count" id="slip-toggle-count">0</span>
-  </button>
-
-  <div class="toast" id="toast"></div>
-
-  <script src="data.js"></script>
-  <script src="app.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GoalLine — Football Betting</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
 </html>
